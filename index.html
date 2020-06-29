@@ -9,11 +9,10 @@
 <script>
 // URLのパラメータを取得
 let urlParam = location.search.substring(1);
-
+let target = document.getElementById("score");
  
  // URLにパラメータが存在する場合
  if(urlParam) {
-    alert("パラメーターあり");
     let param = urlParam.split('&');
  
  // パラメータを格納する用の配列を用意
@@ -23,9 +22,9 @@ let urlParam = location.search.substring(1);
     for (i = 0; i < param.length; i++) {
     let paramItem = param[i].split('=');
     paramArray[paramItem[0]] = paramItem[1];
+    target.innerHTML = paramArray[i];
     }
-    let target = document.getElementById("score");
-    target.innerHTML = paramArray;
+    
 }
 </script>
 </body>

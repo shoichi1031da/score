@@ -22,7 +22,7 @@ let target = document.getElementById("score");
     for (i = 0; i < param.length; i++) {
     let paramItem = param[i].split('=');
     paramArray[paramItem[0]] = paramItem[1];
-    target.innerHTML = paramArray;
+    target.innerHTML = paramArray + param;
     }
     
 }

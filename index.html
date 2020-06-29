@@ -21,9 +21,9 @@ let target = document.getElementById("score");
  // 用意した配列にパラメータを格納
     for (i = 0; i < param.length; i++) {
     let paramItem = param[i].split('=');
-    paramArray[paramItem[0]] = paramItem[1];
-    target.innerHTML = paramArray + param;
+    paramArray[i] = paramItem[1];
     }
+    target.innerHTML = paramArray;
     
 }
 </script>

@@ -1,4 +1,8 @@
 
+<head>
+    <meta charset="UTF-8">
+</head>
+
 <body>
 <div id="score"></div>
 
@@ -9,6 +13,7 @@ let urlParam = location.search.substring(1);
  
  // URLにパラメータが存在する場合
  if(urlParam) {
+    alert("パラメーターあり");
     let param = urlParam.split('&');
  
  // パラメータを格納する用の配列を用意

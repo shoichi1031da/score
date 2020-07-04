@@ -1,19 +1,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
-<div id="score"></div>
+<div class="chat">
+   <div class="name" id="name"></div>
+   <div class="text" id="text"></div>
+</div>
 
 <script>
 // URLのパラメータを取得
 let urlParam = location.search.substring(1);
-let target = document.getElementById("score");
+let target1 = document.getElementById("name");
+let target2 = document.getElementById("text");
  
  // URLにパラメータが存在する場合
  if(urlParam) {
     let param = urlParam.split('&');
+    let name = param[0].split('=');
  
  // パラメータを格納する用の配列を用意
     let paramArray = [];
@@ -23,7 +29,9 @@ let target = document.getElementById("score");
     let paramItem = param[i].split('=');
     paramArray[i] = paramItem[1];
     }
-    target.innerHTML = paramArray;
+    let textja = decodeURI(paramArray);
+    target1.innerHTML = name[0]
+    target2.innerHTML = textja;
     
 }
 </script>

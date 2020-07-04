@@ -1,0 +1,12 @@
+.chat{
+    font-size:50px;
+}
+
+.name{
+    color:green;
+}
+
+.text{
+    color:white;
+    background-color:green;
+}
